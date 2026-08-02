@@ -8,6 +8,7 @@ while ( have_posts() ) : the_post();
 	$type    = get_field( 'type' );
 	$status  = get_field( 'status' );
 	$video   = get_field( 'video' );
+	$image   = get_field( 'image' );
 	$leader  = get_field( 'leader' );
 	$notice  = get_field( 'notice' );
 	$desc    = get_field( 'description' );
@@ -16,7 +17,7 @@ while ( have_posts() ) : the_post();
 	<main id="primary" class="site-main ah-program-single">
 		<div class="entry-content" style="max-width: 720px; margin: 0 auto; padding: 20px;">
 
-			<?php echo ah_render_program_video( $video ); ?>
+			<?php echo ah_render_program_media( $video, $image ); ?>
 
 			<span class="ah-badge"><?php echo esc_html( trim( $day . ' · ' . $time . ' · Room ' . $room ) ); ?></span>
 			<?php if ( ! empty( $status ) ) : ?>
