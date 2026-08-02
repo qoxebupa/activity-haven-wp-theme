@@ -2,7 +2,7 @@
 Theme Name: Activity Haven Child
 Template: radcliffe-2
 Description: Child theme adding a custom Programs listing and detail view, matching the Activity Haven design.
-Version: 1.6
+Version: 1.7
 */
 
 /* ============================================================
@@ -304,6 +304,72 @@ Version: 1.6
 
 @media (max-width: 640px) {
   .ah-hero-content { padding: 0 20px 40px; }
+}
+
+/* Homepage-only: header shows just logo + name, no contact info row
+   (address/phone/email move to the homepage footer instead) */
+body.home #masthead {
+  grid-template-columns: 1fr;
+}
+body.home #masthead .contact-info-area {
+  display: none;
+}
+body.home #masthead .header-wrapper {
+  justify-self: center;
+}
+
+/* ============================================================
+   Homepage footer — matches the dazzling reference site
+   ============================================================ */
+.ah-site-footer {
+  background: var(--ah-charcoal);
+  color: #DCD8CC;
+  padding: 64px 40px 24px;
+  margin: 40px -40px 0;
+}
+.ah-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+.ah-footer-col h3 {
+  font-family: "Fraunces", Georgia, serif;
+  color: white;
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+}
+.ah-footer-col h4 {
+  color: var(--ah-gold);
+  font-family: "Public Sans", -apple-system, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 16px;
+}
+.ah-footer-col a {
+  display: block;
+  margin-bottom: 10px;
+  color: #DCD8CC;
+  text-decoration: none;
+}
+.ah-footer-col a:hover { color: var(--ah-gold); }
+.ah-footer-col p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #B8B4A8;
+}
+.ah-footer-bottom {
+  max-width: 1200px;
+  margin: 48px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 0.82rem;
+  color: #948F80;
+}
+@media (max-width: 700px) {
+  .ah-footer-inner { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
