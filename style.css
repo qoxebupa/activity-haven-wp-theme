@@ -2,7 +2,7 @@
 Theme Name: Activity Haven Child
 Template: radcliffe-2
 Description: Child theme adding a custom Programs listing and detail view, matching the Activity Haven design.
-Version: 1.7
+Version: 1.8
 */
 
 /* ============================================================
@@ -326,6 +326,8 @@ body.home #masthead .header-wrapper {
   color: #DCD8CC;
   padding: 64px 40px 24px;
   margin: 40px -40px 0;
+  clear: both;
+  position: relative;
 }
 .ah-footer-inner {
   max-width: 1200px;
