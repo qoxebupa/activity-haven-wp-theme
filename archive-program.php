@@ -10,12 +10,16 @@ get_header();
 		<div class="ah-program-grid">
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post();
-					$day  = get_field( 'day' );
-					$time = get_field( 'time' );
-					$room = get_field( 'room' );
-					$type = get_field( 'type' );
+					$day   = get_field( 'day' );
+					$time  = get_field( 'time' );
+					$room  = get_field( 'room' );
+					$type  = get_field( 'type' );
+					$image = get_field( 'image' );
 					?>
 					<a class="ah-program-card" href="<?php the_permalink(); ?>">
+						<?php if ( ! empty( $image ) ) : ?>
+							<div class="ah-card-thumb"><img src="<?php echo esc_url( $image ); ?>" alt="" loading="lazy"></div>
+						<?php endif; ?>
 						<span class="ah-badge"><?php echo esc_html( trim( $day . ' · ' . $time ) ); ?></span>
 						<h3><?php the_title(); ?></h3>
 						<p><?php echo esc_html( trim( 'Room ' . $room . ' · ' . $type ) ); ?></p>
