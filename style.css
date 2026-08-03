@@ -2,7 +2,7 @@
 Theme Name: Activity Haven Child
 Template: radcliffe-2
 Description: Child theme adding a custom Programs listing and detail view, matching the Activity Haven design.
-Version: 1.9
+Version: 2.0
 */
 
 /* ============================================================
@@ -265,24 +265,31 @@ Version: 1.9
 .ah-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  width: 210px;
+  box-sizing: border-box;
   padding: 12px 24px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1.715rem;
   border: 2px solid transparent;
   cursor: pointer;
   font-family: "Public Sans", -apple-system, sans-serif;
   text-decoration: none;
+  text-align: center;
 }
-.ah-btn-primary { background: var(--ah-coral); color: white; }
-.ah-btn-primary:hover, .ah-btn-primary:focus-visible { background: var(--ah-coral-dark); color: white; }
+.ah-btn-primary,
 .ah-btn-video {
   background: rgba(255,255,255,0.95);
   color: var(--ah-teal-deep);
   border-color: white;
 }
-.ah-btn-video:hover, .ah-btn-video:focus-visible { background: #fff; color: var(--ah-coral-dark); }
+.ah-btn-primary:hover, .ah-btn-primary:focus-visible,
+.ah-btn-video:hover, .ah-btn-video:focus-visible {
+  background: #fff;
+  color: var(--ah-coral-dark);
+}
 .ah-play-icon { font-size: 0.75rem; }
 
 .ah-carousel-dots {
